@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI校园助手 - 智能服务平台</title>
+    <link rel="stylesheet" href="D:\信息工程学院 曹康泰\product.css">
+
+</head>
+<body>
+    <div class="cyber-container">
+        <header class="cyber-header">
+            <h1 class="cyber-title">AI<span>校园助手</span></h1>
+            <div class="cyber-subtitle">智能服务平台 v3.0</div>
+            <div class="cyber-glitch" data-text="NEURAL NETWORK">NEURAL NETWORK</div>
+        </header>
+        
+        <div class="feature-tabs">
+            <button class="tab-btn active" data-tab="schedule">
+                <i class="icon-calendar"></i> 课表管理
+            </button>
+            <button class="tab-btn" data-tab="navigation">
+                <i class="icon-map"></i> 校园导航
+            </button>
+            <button class="tab-btn" data-tab="qa">
+                <i class="icon-chat"></i> 智能问答
+            </button>
+            <button class="tab-btn" data-tab="poetry">
+                <i class="icon-pen"></i> AI诗歌创作
+            </button>
+            <button class="tab-btn" data-tab="medical">
+                <i class="icon-medical"></i> AI医疗影像
+            </button>
+        </div>
+        
+        <div class="feature-content">
+            <!-- 课表功能 -->
+            <div class="feature-panel active" id="schedule-panel">
+                <div class="schedule-view cyber-card">
+                    <div class="schedule-header">
+                        <button class="schedule-nav prev-week cyber-btn">&lt;</button>
+                        <h4 class="schedule-title">2023-2024学年 第12周</h4>
+                        <button class="schedule-nav next-week cyber-btn">&gt;</button>
+                    </div>
+                    <div class="schedule-grid">
+                        <div class="schedule-day">
+                            <div class="day-header">周一</div>
+                            <div class="course-item" style="--start:2; --duration:2; --color:#4CAF50;">
+                                <span class="course-name">机器学习</span>
+                                <span class="course-time">10:00-12:00</span>
+                                <span class="course-location">六教6A201</span>
+                            </div>
+                        </div>
+                        <!-- 其他日期课程... -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 导航功能 -->
+            <div class="feature-panel" id="navigation-panel">
+                <div class="map-container cyber-card">
+                    <div class="campus-map">
+                        <div class="map-placeholder"></div>
+                        <div class="location-marker" style="top: 30%; left: 45%;">
+                            <div class="marker-pulse"></div>
+                            <div class="marker-icon">📍</div>
+                        </div>
+                        <div class="path-line" style="--start-x:45; --start-y:30; --end-x:60; --end-y:50;"></div>
+                        <div class="destination-marker" style="top: 50%; left: 60%;">
+                            <div class="marker-icon">🏫</div>
+                            <div class="location-name">六教</div>
+                        </div>
+                    </div>
+                    <div class="navigation-info">
+                        <h4>前往六教</h4>
+                        <p>从当前位置出发,步行约8分钟</p>
+                        <div class="step-item">
+                            <span class="step-icon">1</span>
+                            <span class="step-text">向西直行200米至十字路口</span>
+                        </div>
+                        <div class="step-item">
+                            <span class="step-icon">2</span>
+                            <span class="step-text">右转进入学堂路</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 问答功能 -->
+            <div class="feature-panel" id="qa-panel">
+                <div class="chat-container cyber-card">
+                    <div class="chat-messages">
+                        <div class="message ai-message">
+                            <div class="message-content">
+                                你好!我是清华校园AI助手,可以回答关于校园生活、课程安排等各种问题。
+                            </div>
+                        </div>
+                        <div class="message user-message">
+                            <div class="message-content">
+                                今天图书馆开放到几点？
+                            </div>
+                        </div>
+                        <div class="message ai-message">
+                            <div class="message-content">
+                                清华大学图书馆主馆今日开放时间：<br>
+                                • 7:30-22:30(一层至三层)<br>
+                                • 7:30-23:30(四层自习区)<br>
+                                当前人流量：适中
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" placeholder="输入您的问题...">
+                        <button class="send-btn cyber-btn">发送</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AI诗歌创作功能 -->
+            <div class="feature-panel" id="poetry-panel">
+                <div class="cyber-card poetry-generator">
+                    <div class="cyber-card-header">
+                        <h3><i class="icon-neural"></i> AI诗歌创作引擎</h3>
+                        <div class="cyber-pulse"></div>
+                    </div>
+                    <div class="poetry-controls">
+                        <div class="input-group">
+                            <label for="poetry-theme">诗歌主题</label>
+                            <input type="text" id="poetry-theme" placeholder="输入诗歌主题，如：春天、离别...">
+                        </div>
+                        <div class="input-group">
+                            <label for="poetry-style">诗歌风格</label>
+                            <select id="poetry-style">
+                                <option value="classic">古典诗词</option>
+                                <option value="modern">现代诗歌</option>
+                                <option value="haiku">俳句</option>
+                                <option value="free">自由体</option>
+                            </select>
+                        </div>
+                        <button class="generate-btn cyber-btn cyber-glow">生成诗歌</button>
+                    </div>
+                    <div class="poetry-result">
+                        <div class="loading-animation" style="display: none;">
+                            <div class="neural-activity">
+                                <div class="neuron"></div>
+                                <div class="neuron"></div>
+                                <div class="neuron"></div>
+                                <div class="pulse"></div>
+                            </div>
+                            <p>神经网络正在创作中...</p>
+                        </div>
+                        <div class="generated-poem">
+                            <!-- 生成的诗歌将显示在这里 -->
+                        </div>
+                    </div>
+                    <div class="poetry-history">
+                        <h4>创作历史 <span class="badge">3</span></h4>
+                        <div class="history-items">
+                            <!-- 历史记录将显示在这里 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AI医疗影像分析功能 -->
+            <div class="feature-panel" id="medical-panel">
+                <div class="cyber-card medical-analyzer">
+                    <div class="cyber-card-header">
+                        <h3><i class="icon-ai-medical"></i> AI医疗影像分析系统</h3>
+                        <div class="cyber-pulse red"></div>
+                    </div>
+                    <div class="medical-container">
+                        <div class="image-uploader">
+                            <div class="upload-area" id="drop-zone">
+                                <i class="icon-upload"></i>
+                                <p>拖放医疗影像文件到这里或点击上传</p>
+                                <input type="file" id="file-input" accept="image/*">
+                            </div>
+                            <div class="image-preview">
+                                <div class="preview-placeholder">
+                                    <i class="icon-xray"></i>
+                                    <p>影像预览区域</p>
+                                </div>
+                                <img id="image-preview" style="display: none;">
+                            </div>
+                        </div>
+                        <div class="analysis-controls">
+                            <div class="modality-selector">
+                                <label>影像模态:</label>
+                                <div class="modality-options">
+                                    <button class="modality-btn active" data-modality="xray">X光</button>
+                                    <button class="modality-btn" data-modality="ct">CT</button>
+                                    <button class="modality-btn" data-modality="mri">MRI</button>
+                                    <button class="modality-btn" data-modality="ultrasound">超声</button>
+                                </div>
+                            </div>
+                            <button class="analyze-btn cyber-btn cyber-glow red">开始分析</button>
+                        </div>
+                        <div class="analysis-result">
+                            <div class="result-visualization">
+                                <div class="scan-line"></div>
+                                <div class="heatmap-overlay"></div>
+                                <div class="annotations"></div>
+                            </div>
+                            <div class="result-report">
+                                <h4>AI分析报告 <span class="confidence">置信度: 92.7%</span></h4>
+                                <div class="report-findings">
+                                    <div class="finding">
+                                        <span class="finding-label">异常发现:</span>
+                                        <span class="finding-value">右下肺叶结节</span>
+                                    </div>
+                                    <div class="finding">
+                                        <span class="finding-label">大小:</span>
+                                        <span class="finding-value">约6.2mm</span>
+                                    </div>
+                                    <div class="finding">
+                                        <span class="finding-label">特征:</span>
+                                        <span class="finding-value">边缘光滑，密度均匀</span>
+                                    </div>
+                                    <div class="finding">
+                                        <span class="finding-label">建议:</span>
+                                        <span class="finding-value">建议6个月后复查CT</span>
+                                    </div>
+                                </div>
+                                <div class="report-details">
+                                    <p>AI模型基于ResNet-152架构,在50万例标注影像上训练,对肺结节检测的敏感度为96.2%,特异度为94.8%。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project-footer">
+            <div class="tech-tags">
+                <span class="tech-tag">深度学习</span>
+                <span class="tech-tag">神经网络</span>
+                <span class="tech-tag">计算机视觉</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">大数据分析</span>
+            </div>
+            <div class="cyber-link">
+                <a href="#" class="project-link">
+                    <span>查看项目详情</span>
+                    <i class="icon-arrow"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="cyber-overlay"></div>
+    <div class="cyber-grid"></div>
+    
+    <script src="D:\信息工程学院 曹康泰\product.js"></script>
+</body>
+</html>
